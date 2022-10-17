@@ -22,11 +22,11 @@
       document.querySelector('.num__box').textContent = "?";
 
          //reset game
-        //  document.querySelector('.again').addEventListener('click', function(){
-        //   document.querySelector('.score').textContent = "score:" + 11;
-        //   document.querySelector('.num__box').textContent = number
-          //  document.querySelector('.message').textContent = "Start Guessing!";
-       //  });
+          document.querySelector('.again').addEventListener('click', function(){
+           document.querySelector('.score').textContent = "score:" + 11;
+           document.querySelector('.num__box').textContent = number
+         document.querySelector('.message').textContent = "Start Guessing!";
+         });
 
       document.querySelector('.check__box').addEventListener('click', function(){
        const guess = Number(document.querySelector('.guess').value );
