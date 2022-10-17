@@ -1,0 +1,280 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+}
+/*Utility class*/
+.grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:2rem;
+}
+p{
+    font-size:15px;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card_one{
+    width:289px;
+    height:258px;
+    background: #f3f3f3;
+    justify-content: center;
+    align-items: center;
+    padding:90px 30px;
+    border-radius: 14px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.Game{
+    transform:translateY(-50px);
+}
+.num{
+    width:290px;
+    height:1px;
+    border:1px;
+    padding:0px 20px;
+    transform:translateY(-20px);
+    background:black;
+    margin-left:-30px;
+} 
+.num__box{
+    transform:translateY(-10px);
+    width: 80px;
+    margin:0px 40px;
+    padding: 4px 23px;
+    background:brown;
+    color:#fff;
+    justify-content: center;
+    margin-left:70px;
+}
+.again{
+    width:99px;
+    height:45px;
+    background:black;
+    border-radius:6px;
+    padding:0px 10px;
+    cursor: pointer;
+}
+.check__box{
+    transform:translateY(30px);
+    width:70px;
+    height:45px;
+    background:red;
+    border-radius:6px;
+    padding:20px 10px;
+    cursor: pointer;
+}
+.check__box:hover{
+    background: gold;
+}
+.again:hover{
+    background: tomato;
+}
+.card_two, .card_three, .card_four, .card_five{
+    width:289px;
+    height:38px;
+    border-radius: 7px;
+    margin-left:70px ;
+    margin: 10px;
+    color:#fff;
+    padding: 0 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.card_two{
+    background: blue;
+}
+.card_three{
+    background: pink;
+    font-size:25px;
+}
+.card_four{
+    background: green;
+}
+.card_five{
+    background: purple;
+}
+
+
+
+
+
+/* very small devices */
+
+@media only screen 
+and (max-width: 330px)
+ {
+html,body{
+width:100%;
+overflow-x:hidden;
+}
+.card_one{
+    width:259px;
+    height:298px;
+    font-size:20px;
+}
+.col_1{
+    margin-left:23px;
+}
+.col_2{
+    margin-left:30px;
+}
+.card_two, .card_three, .card_four, .card_five{
+    width:189px;
+    height:108px;
+    padding:15px 20px;
+}
+.check__box{
+    width:100px;
+    height:55px;
+    font-size:25px;
+    color:#fff;
+}
+.num{
+    width:260px;
+    height:1px;
+}
+.num__box{
+    transform:translateY(-10px);
+    width: 100px;
+    height: 30px;
+}
+input{
+    width: 100px;
+    height: 30px;
+    transform:translateY(20px)
+}
+.check__box:hover{
+    background: gold;
+}
+.again:hover{
+    background: tomato;
+}
+p{
+    font-size:29px;
+}
+}
+
+/* small device */
+@media only screen 
+and (min-width: 340px)
+ {
+    html,body{
+        width:100%;
+        overflow-x:hidden;
+ }
+ .card_one{
+    width:259px;
+    height:298px;
+    font-size:20px;
+}
+.col_1{
+    margin-left:23px;
+}
+.col_2{
+    margin-left:30px;
+}
+.card_two, .card_three, .card_four, .card_five{
+    width:189px;
+    height:108px;
+    padding:15px 20px;
+}
+.check__box{
+    width:100px;
+    height:55px;
+    font-size:25px;
+    color:#fff;
+}
+.num{
+    width:260px;
+    height:1px;
+}
+.num__box{
+    transform:translateY(-10px);
+    width: 100px;
+    height: 30px;
+}
+input{
+    width: 100px;
+    height: 30px;
+    transform:translateY(20px)
+}
+.check__box:hover{
+    background: gold;
+}
+.again:hover{
+    background: tomato;
+}
+p{
+    font-size:29px;
+}
+ }
+
+ /* medium devices */
+ @media only screen 
+and (min-width: 878px)
+ {
+    html,body{
+        width:100%;
+        overflow-x:hidden;
+ }
+ .col_1, .col_2{
+    display:grid;
+    grid-template-columns: 2fr 2fr;
+ }
+ .card_one{
+    width:259px;
+    height:368px;
+    font-size:20px;
+}
+ .card_two, .card_three, .card_four, .card_five{
+    width:189px;
+    height:168px;
+    padding:15px 20px;
+}
+}
+
+/* medium and large device*/
+ @media only screen 
+and (min-width: 980px)
+ {
+    html,body{
+        width:100%;
+        overflow-x:hidden;
+ }
+ .col_1, .col_2{
+    display:grid;
+    grid-template-columns: 2fr 2fr;
+    transform: translateX(90px);
+ }
+ .card_one{
+    width:259px;
+    height:368px;
+    font-size:20px;
+}
+ .card_two, .card_three, .card_four, .card_five{
+    width:189px;
+    height:168px;
+    padding:15px 20px;
+}
+}
+
+/*  larger device*/
+ @media only screen 
+and (min-width: 1390px)
+ {
+    html,body{
+        width:100%;
+        overflow-x:hidden;
+ }
+ .col_1, .col_2{
+    transform: translateX(190px);
+ }
+}
