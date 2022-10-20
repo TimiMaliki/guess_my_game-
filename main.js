@@ -9,24 +9,18 @@
 
 
    // Dom manipulation: I got the highscore and score from the html and gave it a value which will appear on the dom
-      document.querySelector('.High__score').textContent = "Highscore:" + 13;
+      document.querySelector('.High__score').textContent = "Highscore:" + 0;
        document.querySelector('.score').textContent = "score:" + 11;
 
 
     //Dom manipulation: this is where my secreat number holds in the game
-     const number = Math.trunc(Math.random()*20)+1;
+     let number = Math.trunc(Math.random()*20)+1;
       //Dom manipulation: this is the score area which will decrease if the player lose
           let  score = 20;
+          let highscore = 0;
 
 //
       document.querySelector('.num__box').textContent = "?";
-
-         //reset game
-          document.querySelector('.again').addEventListener('click', function(){
-           document.querySelector('.score').textContent = "score:" + 11;
-           document.querySelector('.num__box').textContent = number
-         document.querySelector('.message').textContent = "Start Guessing!";
-         });
 
       document.querySelector('.check__box').addEventListener('click', function(){
        const guess = Number(document.querySelector('.guess').value );
@@ -46,6 +40,12 @@
         //the background body change when the value is  equal to the number
         document.querySelector('body').style.backgroundColor = "#60b347"
         document.querySelector('.num__box').textContent = number
+
+        if(score > highscore){
+          highscore  = score;
+            document.querySelector('.High__score').textContent = `Highscore:${highscore}`;
+
+        }
    }
 
 
@@ -75,3 +75,20 @@
     }
   }
  });
+
+  //reset game
+          document.querySelector('.again').addEventListener('click', function(){
+            score = 20
+
+           document.querySelector('.score').textContent ="score:" + score;
+
+           document.querySelector('.num__box').textContent = "?"
+
+         document.querySelector('.message').textContent = "Start Guessing!";
+
+         number = Math.trunc(Math.random()*20)+1;
+
+         document.querySelector('.guess').value = ""
+
+         document.querySelector('body').style.backgroundColor = "#fff"
+         });
